@@ -1,4 +1,4 @@
-sofa <- scorecalc <- scorecomp <- vaso_cv <-icu_first_18
+sofa <- scorecalc <- scorecomp <- vaso_cv <-icu_first_18<-icu_first
                                           <-wt
                                           <-echo2
                                           
@@ -7,7 +7,7 @@ sofa <- scorecalc <- scorecomp <- vaso_cv <-icu_first_18
                                           <-ventelurations
                                <- vitals_pan
                                <- labs_pan
-                               <- uo_pan <-icu_first_18
+                               <- uo_pan <-icu_first_18<-icu_first
                                <- gcs_pan
 
 
