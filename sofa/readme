@@ -5,7 +5,7 @@ sofa <- scorecalc <- scorecomp <- vaso_cv <-icu_first_18 <-icu_first
                                <- vaso_mv <-icu_first_18 <-icu_first
                                <- pafi2   <-bloodgas_pan_aterial <- bloodgas_pan
                                           <-ventelurations
-                               <- vitals_pan
+                               <- vitals_pan<-icu_fisrt_18
                                <- labs_pan
                                <- uo_pan <-icu_first_18 <-icu_first
                                <- gcs_pan
