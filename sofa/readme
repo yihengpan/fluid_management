@@ -1,14 +1,14 @@
-sofa <- scorecalc <- scorecomp <- vaso_cv    <-icu_first_18         <-icu_first
+sofa <- scorecalc <- scorecomp <- vaso_cv    <-icu_18
                                              <-wt
                                              <-echo2
                                           
-                               <- vaso_mv    <-icu_first_18         <-icu_first
-                               <- pafi2      <-bloodgas_pan_aterial <- bloodgas_pan
+                               <- vaso_mv    <-icu_18
+                               <- pafi2      <-bloodgas_pan_aterial <- bloodgas_pan  <-icu_18
                                              <-ventelurations
-                               <- vitals_pan <-icu_fisrt_18         <-icu_first
-                               <- labs_pan   <-icu_first_18         <-icu_first
-                               <- uo_pan     <-icu_first_18         <-icu_first
-                               <- gcs_pan    <-icu_first_18         <-icu_first
+                               <- vitals_pan <-icu_18
+                               <- labs_pan   <-icu_18
+                               <- uo_pan     <-icu_18
+                               <- gcs_pan    <-icu_18
 
 
 
