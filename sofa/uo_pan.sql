@@ -11,7 +11,7 @@ select
         when oe.itemid = 227488 and oe.value > 0 then -1*oe.value
         else oe.value
     end) as UrineOutput
-from icu_first_18 ie
+from icu_18 ie
 -- Join to the outputevents table to get urine output
 left join mimiciii.outputevents oe
 -- join on all patient identifiers

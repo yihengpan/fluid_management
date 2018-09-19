@@ -111,7 +111,7 @@ FROM
     ELSE le.valuenum
     END AS valuenum
 
-  FROM icu_first_18 ie
+  FROM icu_18 ie
 
   LEFT JOIN mimiciii.labevents le
     ON le.subject_id = ie.subject_id AND le.hadm_id = ie.hadm_id

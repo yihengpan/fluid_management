@@ -17,7 +17,7 @@ wt AS
         ELSE null
       END) AS weight
 
-  from icu_first_18 ie
+  from icu_18 ie
   left join mimiciii.chartevents c
     on ie.icustay_id = c.icustay_id
 	and c.charttime >= ie.intime

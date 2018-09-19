@@ -29,7 +29,7 @@ CREATE MATERIALIZED VIEW vaso_cv AS
     , case when itemid in (30043,30307) then rate end as rate_dopamine
     , case when itemid in (30042,30306) then rate end as rate_dobutamine
 
-  from icu_first_18 ie
+  from icu_18 ie
   inner join mimiciii.inputevents_cv cv
     on ie.icustay_id = cv.icustay_id 
   left join wt

@@ -7,7 +7,7 @@ CREATE MATERIALIZED VIEW vaso_mv AS
     , max(case when itemid = 221662 then rate end) as rate_dopamine
     , max(case when itemid = 221653 then rate end) as rate_dobutamine
  ,ceiling((extract( epoch from mv.starttime - ie.intime))/60/60/24) as day
-  from icu_first_18 ie
+  from icu_18 ie
   inner join mimiciii.inputevents_mv mv
     on ie.icustay_id = mv.icustay_id 
   where itemid in (221906,221289,221662,221653)

@@ -61,7 +61,7 @@ with pvt as
         else valuenum
         end as valuenum
 
-    from icu_first_18 ie
+    from icu_18 ie
     left join mimiciii.labevents le
       on le.subject_id = ie.subject_id and le.hadm_id = ie.hadm_id
       and le.charttime >= ie.intime 

@@ -43,7 +43,7 @@ with base as
   from mimiciii.CHARTEVENTS l
 
   -- get intime for charttime subselection
-  inner join mimiciii.icustays b
+  inner join icu_18 b
     on l.icustay_id = b.icustay_id
 
   -- Isolate the desired GCS variables
