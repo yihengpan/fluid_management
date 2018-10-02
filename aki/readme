@@ -1,1 +1,13 @@
+urineoutput: every charttime the sum of urine output in different duration
+             icustay_id, charttime, uo_6h, uo_12h, uo_24h
 
+weight_duration:
+             icustay_id, weight, starttime, endtime
+baseline:
+        icustay_id, creatinine_max
+        
+kdigo_daily_uo:
+        icustay_id, charttime, day, weight, uo_6, uo_12, uo_24
+
+aki_final:
+           icustay_id, day, uo6, uo12, uo24, aki_stage_uo, aki_stage_creat, creatinine_max, AKI_stage
