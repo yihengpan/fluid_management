@@ -72,13 +72,18 @@ order by hadm_id,intime
 
 c6 as
 (select subject_id,hadm_id,sum(sofa_day) as sofa_day,per from c5
-group by subject_id,hadm_id,per)
+group by subject_id,hadm_id,per),
 
+c7 as (
 select c6.*,
 case when (per - sofa_day)>0 then (per - sofa_day)
 else 0 end
 as odf
 from c6
+)
 
+select icustay_id, c7.* from c7 left join icu_first
+on c7.subject_id = icu_first.subject_id
+and c7.hadm_id = icu_first.hadm_id
 
 
