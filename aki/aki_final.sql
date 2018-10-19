@@ -1,5 +1,4 @@
-DROP MATERIALIZED VIEW IF EXISTS aki_final;
-CREATE MATERIALIZED VIEW aki_final AS
+
 with uo_6hr as
 (
   select
@@ -55,20 +54,25 @@ from
   					and uo_6hr.day = uo_12hr.day
   left join uo_24hr on uo_6hr.icustay_id = uo_24hr.icustay_id
   					and uo_6hr.day = uo_24hr.day
-limit 10					
+					
 		
 )
 
-select icu.icustay_id,coalesce(stage_uo.day,baseline.day) as day,uo6,uo12,uo24,
+select sofa.icustay_id,coalesce(stage_uo.day,baseline.day) as day,uo6,uo12,uo24,
 stage_uo.aki_stage_uo,baseline.aki_stage_creat
-,creatinine_max,
+,baseline.creatinine_max,
 case
       when AKI_stage_creat >= AKI_stage_uo then AKI_stage_creat
       when AKI_stage_uo > AKI_stage_creat then AKI_stage_uo
       else coalesce(AKI_stage_creat,AKI_stage_uo)
     end as AKI_stage
-from mimiciii.icustays icu
+from sofa_pan as sofa
 left join stage_uo 
-on icu.icustay_id = stage_uo.icustay_id
+on sofa.icustay_id = stage_uo.icustay_id
+and sofa.day = stage_uo.day
 left join baseline
-on icu.icustay_id = baseline.icustay_id
+on sofa.icustay_id = baseline.icustay_id
+and sofa.day = baseline.day
+where sofa.icustay_id in
+(select icustay_id from icu_18)
+order by icustay_id,day
