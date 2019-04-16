@@ -36,13 +36,12 @@ select
   ur.icustay_id
 , ur.charttime
 , ur.day
-, wd.weight
+, wt.weight
 , ur.UrineOutput_6hr
 , ur.UrineOutput_12hr
 , ur.UrineOutput_24hr
 from ur_stg ur
-left join weightdurations wd
-  on  ur.icustay_id = wd.icustay_id
-  and ur.charttime >= wd.starttime
-  and ur.charttime <  wd.endtime
+left join wt
+  on  ur.icustay_id = wt.icustay_id
+
 order by icustay_id, charttime;

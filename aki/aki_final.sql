@@ -1,4 +1,5 @@
-
+DROP MATERIALIZED VIEW IF EXISTS aki_final;
+CREATE MATERIALIZED VIEW aki_final AS
 with uo_6hr as
 (
   select
